@@ -1,4 +1,5 @@
 const toDoCont = document.querySelector('.to-do-cont')
+const list = document.querySelector('.list')
 const addBtn = document.querySelector('.add-btn')
 const deleteBtn = document.querySelector('.delete-btn')
 const refreshBtn = document.querySelector('.refresh-btn')
@@ -14,7 +15,7 @@ addBtn.addEventListener('click', () => {
     let addTask = prompt('What would you like to add?')
     let newTask = document.createElement('h3')
     newTask.innerHTML = `${i}: ${addTask}`
-    toDoCont.append(newTask)
+    list.append(newTask)
 })
 
 
@@ -22,7 +23,7 @@ deleteBtn.addEventListener('click', () => {
     let deleteTask = parseInt(prompt('Which number would you like to delete?'));
     deleteTask--
 
-    toDoCont.removeChild(toDoCont.childNodes[deleteTask])
+    list.removeChild(list.childNodes[deleteTask])
 
 })
 
